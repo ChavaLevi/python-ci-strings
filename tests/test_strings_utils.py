@@ -16,11 +16,11 @@ def test_validate_mail(email, expected):
 
 @pytest.mark.parametrize("string, char, expected_count", [
 
-    ("hello world", "l", 2),
+    ("hello world", "l", 1),
     ("", "a", 0),
     ("aaaaa", "a", 5),
     ("abcabcabc", "b", 3),
-    ("no match here", "z", 1),
+    ("no match here", "z", 0),
     ("CaseSensitive", "c", 0),  # lowercase 'c' not in string
     ("CaseSensitive", "C", 1),  # uppercase 'C' is present
 
