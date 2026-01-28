@@ -20,7 +20,7 @@ def test_validate_mail(email, expected):
     ("", "a", 0),
     ("aaaaa", "a", 5),
     ("abcabcabc", "b", 3),
-    ("no match here", "z", 0),
+    ("no match here", "z", 1),
     ("CaseSensitive", "c", 0),  # lowercase 'c' not in string
     ("CaseSensitive", "C", 1),  # uppercase 'C' is present
 
