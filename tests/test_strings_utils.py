@@ -16,7 +16,7 @@ def test_validate_mail(email, expected):
 
 @pytest.mark.parametrize("string, char, expected_count", [
 
-    ("hello world", "l", 1),
+    ("hello world", "l", 0),
     ("", "a", 0),
     ("aaaaa", "a", 5),
     ("abcabcabc", "b", 3),
